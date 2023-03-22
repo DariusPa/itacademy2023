@@ -1,0 +1,15 @@
+<section class="categories">
+  <h2>Browse by Category</h2>
+  <ul>
+    <li *ngFor="let cat of categories"><a routerLink="/cat/{{cat.id}}">{{ cat.title }}</a></li>
+  </ul>
+</section>
+<section class="trending-now">
+  <h2>{{ category.title }}</h2>
+  <div class="trending-now-container">
+    <div class="trending-now-item" *ngFor="let movie of movies">
+      <a routerLink="/movie/{{movie.id}}"><img src="{{ movie.imageUrl }}" alt="Trending Now 1"></a>
+      <h3>{{movie.title}}</h3>
+    </div>
+  </div>
+</section>
